@@ -1,2 +1,5 @@
 strath-server\db
 strath-server\log
+
+strath-server\tmp
+strath-server\log
