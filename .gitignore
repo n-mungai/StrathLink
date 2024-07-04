@@ -4,3 +4,4 @@ strath-server\log
 strath-server\tmp
 strath-server\log
 strath-server\storage\*
+strath-server\Gemfile.lock
