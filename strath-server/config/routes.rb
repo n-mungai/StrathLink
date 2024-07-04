@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  resources :articles, only: [:index, :show, :create]
   resources :messages
   resources :students, only: [:index, :show, :create]
 
-    get 'student', to: 'students#index'
+    get '/students', to: 'students#index'
 
-    post 'student', to: 'students#create'
+    get '/student', to: 'students#show'
+
+    post '/signup', to: 'students#create'
+
+    # routes for the articles
+    get '/articles', to: 'articles#index'
 
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
