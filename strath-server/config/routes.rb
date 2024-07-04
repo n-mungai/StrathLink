@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
   resources :articles, only: [:index, :show, :create]
-  resources :messages
+  resources :messages, only: [:index, :show, :create]
   resources :students, only: [:index, :show, :create]
 
     get '/students', to: 'students#index'
 
-    get '/student', to: 'students#show'
+    get '/loggedin', to: 'students#show'
 
     post '/signup', to: 'students#create'
 
     # routes for the articles
     get '/articles', to: 'articles#index'
+
+    post '/login', to: 'sessions#create'
+
+    delete '/logout', to: 'sessions#destroy'
 
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

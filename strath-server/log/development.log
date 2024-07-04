@@ -216,3 +216,2128 @@ Processing by StudentsController#index as */*
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1053)
 
 
+Started GET "/student" for 127.0.0.1 at 2024-07-04 13:37:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:36: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+...rs.full_messages}, status: :404
+...                            ^~~
+):
+  
+app/controllers/students_controller.rb:36: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+Started GET "/students" for 127.0.0.1 at 2024-07-04 13:37:47 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:36: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+...rs.full_messages}, status: :404
+...                            ^~~
+):
+  
+app/controllers/students_controller.rb:36: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+Started GET "/student" for 127.0.0.1 at 2024-07-04 13:38:55 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 172ms (Views: 68.0ms | ActiveRecord: 4.1ms | Allocations: 30893)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 13:39:41 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 922)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 13:40:13 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 920)
+
+
+Started GET "/student?course=%22BBIT%22" for 127.0.0.1 at 2024-07-04 13:41:05 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"\"BBIT\"", "student"=>{"course"=>"\"BBIT\""}}
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.5ms | Allocations: 913)
+
+
+Started GET "/student?course" for 127.0.0.1 at 2024-07-04 13:41:13 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>nil, "student"=>{"course"=>nil}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 920)
+
+
+Started GET "/student?course" for 127.0.0.1 at 2024-07-04 13:41:59 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>nil, "student"=>{"course"=>nil}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 3.1ms | Allocations: 5305)
+
+
+Started POST "/student" for 127.0.0.1 at 2024-07-04 13:44:06 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BBIT", "availabile"=>"true", "year"=>"4", "interests"=>"reading", "student"=>{"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "interests"=>"reading", "course"=>"BBIT", "year"=>"4"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:33:in `create'
+  [1m[36mStudent Create (6.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy Nyambzzzzz"], ["email", "ivynyambz@gmail.com"], ["interests", "reading"], ["course", "BBIT"], ["year", 4], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 10:44:06.389839"], ["updated_at", "2024-07-04 10:44:06.389839"]]
+  ↳ app/controllers/students_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:33:in `create'
+Completed 500 Internal Server Error in 14ms (Views: 0.6ms | ActiveRecord: 8.5ms | Allocations: 2712)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...); return".):
+  
+app/controllers/students_controller.rb:39:in `create'
+Started POST "/student" for 127.0.0.1 at 2024-07-04 13:44:28 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BBIT", "availabile"=>"true", "year"=>"4", "interests"=>"reading", "student"=>{"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "interests"=>"reading", "course"=>"BBIT", "year"=>"4"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:33:in `create'
+  [1m[36mStudent Create (1.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy Nyambzzzzz"], ["email", "ivynyambz@gmail.com"], ["interests", "reading"], ["course", "BBIT"], ["year", 4], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 10:44:28.175906"], ["updated_at", "2024-07-04 10:44:28.175906"]]
+  ↳ app/controllers/students_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:33:in `create'
+Completed 500 Internal Server Error in 12ms (Views: 0.9ms | ActiveRecord: 6.0ms | Allocations: 6208)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...); return".):
+  
+app/controllers/students_controller.rb:39:in `create'
+Started POST "/student" for 127.0.0.1 at 2024-07-04 13:46:15 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BBIT", "availabile"=>"true", "year"=>"4", "interests"=>"reading", "student"=>{"name"=>"Ivy Nyambzzzzz", "email"=>"ivynyambz@gmail.com", "interests"=>"reading", "course"=>"BBIT", "year"=>"4"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:32:in `create'
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy Nyambzzzzz"], ["email", "ivynyambz@gmail.com"], ["interests", "reading"], ["course", "BBIT"], ["year", 4], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 10:46:15.667447"], ["updated_at", "2024-07-04 10:46:15.667447"]]
+  ↳ app/controllers/students_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:32:in `create'
+Completed 500 Internal Server Error in 10ms (Views: 0.3ms | ActiveRecord: 6.0ms | Allocations: 6216)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...); return".):
+  
+app/controllers/students_controller.rb:39:in `create'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 15:26:41 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (8.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 15.1ms | ActiveRecord: 13.0ms | Allocations: 5589)
+
+
+Started GET "/student?course" for 127.0.0.1 at 2024-07-04 15:27:08 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>nil, "student"=>{"course"=>nil}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 60)
+
+
+Started GET "/student?course" for 127.0.0.1 at 2024-07-04 15:27:23 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>nil, "student"=>{"course"=>nil}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/student?course=%22ICS%22" for 127.0.0.1 at 2024-07-04 15:27:44 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"\"ICS\"", "student"=>{"course"=>"\"ICS\""}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 113)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:11:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:28:15 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:11:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:28:39 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:11:in `show'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 15:28:46 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 1133)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:29:04 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:11:in `show'
+Started GET "/student?year" for 127.0.0.1 at 2024-07-04 15:30:10 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>nil, "student"=>{"year"=>nil}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:30:36 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>4, "student"=>{"year"=>4}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 98)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student?year" for 127.0.0.1 at 2024-07-04 15:30:52 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>nil, "student"=>{"year"=>nil}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:34:39 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>4, "student"=>{"year"=>4}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student?year" for 127.0.0.1 at 2024-07-04 15:35:15 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>nil, "student"=>{"year"=>nil}}
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/student?year=4" for 127.0.0.1 at 2024-07-04 15:37:16 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>"4", "student"=>{"year"=>"4"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student?year=4" for 127.0.0.1 at 2024-07-04 15:37:22 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>"4", "student"=>{"year"=>"4"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:38:05 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>"4"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 97)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:39:37 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:15: syntax error, unexpected `else'
+        if else params[:year]
+           ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:20: syntax error, unexpected `else'
+        if else params[:availability]
+           ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:24: syntax error, unexpected `else'
+        if else params[:email]
+           ^~~~
+):
+  
+app/controllers/students_controller.rb:15: syntax error, unexpected `else'
+app/controllers/students_controller.rb:20: syntax error, unexpected `else'
+app/controllers/students_controller.rb:24: syntax error, unexpected `else'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:45:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:20: syntax error, unexpected `else', expecting `end' or dummy end
+            else if params[:availability]
+            ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:24: syntax error, unexpected `else', expecting `end' or dummy end
+            else if params[:email]
+            ^~~~
+):
+  
+app/controllers/students_controller.rb:20: syntax error, unexpected `else', expecting `end' or dummy end
+app/controllers/students_controller.rb:24: syntax error, unexpected `else', expecting `end' or dummy end
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:45:29 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:20: syntax error, unexpected `else', expecting `end' or dummy end
+            else if params[:availability]
+            ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:24: syntax error, unexpected `else', expecting `end' or dummy end
+            else if params[:email]
+            ^~~~
+):
+  
+app/controllers/students_controller.rb:20: syntax error, unexpected `else', expecting `end' or dummy end
+app/controllers/students_controller.rb:24: syntax error, unexpected `else', expecting `end' or dummy end
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:46:05 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:15: syntax error, unexpected `else'
+            if else  params[:year]
+               ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:20: syntax error, unexpected `else'
+            if else  params[:availability]
+               ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:24: syntax error, unexpected `else'
+            if else  params[:email]
+               ^~~~
+):
+  
+app/controllers/students_controller.rb:15: syntax error, unexpected `else'
+app/controllers/students_controller.rb:20: syntax error, unexpected `else'
+app/controllers/students_controller.rb:24: syntax error, unexpected `else'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:46:59 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:20: syntax error, unexpected `elsif', expecting `end' or dummy end
+            elsif params[:availability]
+            ^~~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:24: syntax error, unexpected `elsif', expecting `end' or dummy end
+            elsif params[:email]
+            ^~~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/students_controller.rb:27: syntax error, unexpected `end'
+        end
+        ^~~
+):
+  
+app/controllers/students_controller.rb:20: syntax error, unexpected `elsif', expecting `end' or dummy end
+app/controllers/students_controller.rb:24: syntax error, unexpected `elsif', expecting `end' or dummy end
+app/controllers/students_controller.rb:27: syntax error, unexpected `end'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:47:22 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>4, "student"=>{"year"=>4}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.9ms | Allocations: 3179)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 15:47:32 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"year"=>4, "student"=>{"year"=>4}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 99)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:16:in `show'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 15:54:18 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 135ms (Views: 95.2ms | ActiveRecord: 3.3ms | Allocations: 19248)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 15:54:28 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1145)
+
+
+Started GET "/student/BBIT" for 127.0.0.1 at 2024-07-04 16:00:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/student/BBIT"):
+  
+Started GET "/student" for 127.0.0.1 at 2024-07-04 16:00:35 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+  
+NoMethodError (undefined method `where' for nil):
+  
+app/controllers/students_controller.rb:11:in `show'
+Started GET "/student" for 127.0.0.1 at 2024-07-04 16:02:57 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"id"=>1, "student"=>{"id"=>1}}
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:26:in `show'
+Completed 200 OK in 40ms (Views: 3.8ms | ActiveRecord: 16.6ms | Allocations: 5834)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 16:03:20 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"id"=>1, "student"=>{"id"=>1}}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:26:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 780)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 16:03:29 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"ICS", "student"=>{"course"=>"ICS"}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course" = ? LIMIT ?[0m  [["course", "ICS"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:26:in `show'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 4804)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 16:03:36 +0300
+Processing by StudentsController#show as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course" = ? LIMIT ?[0m  [["course", "BBIT"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:26:in `show'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 474)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 16:04:48 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course" = ?[0m  [["course", "BBIT"]]
+  ↳ app/controllers/students_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 3.5ms | Allocations: 5412)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 16:05:32 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course" = ?[0m  [["course", "BBIT"]]
+  ↳ app/controllers/students_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 3.7ms | Allocations: 5410)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 16:05:42 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"course"=>"BBIT", "student"=>{"course"=>"BBIT"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 3.3ms | Allocations: 146)
+
+
+  
+NameError (uninitialized class variable @@students in StudentsController):
+  
+app/controllers/students_controller.rb:7:in `index'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 16:06:43 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"year"=>4, "student"=>{"year"=>4}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."year" = ?[0m  [["year", 4]]
+  ↳ app/controllers/students_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 3.1ms | Allocations: 5529)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 16:06:50 +0300
+Processing by StudentsController#index as */*
+  Parameters: {"year"=>2, "student"=>{"year"=>2}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."year" = ?[0m  [["year", 2]]
+  ↳ app/controllers/students_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 570)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-07-04 16:16:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240704133545)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "topic" varchar, "student_id" integer NOT NULL, "writer" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_50a4a5095c"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_articles_on_student_id" ON "articles" ("student_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240704133545') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "How to survive in SU"], ["content", "Do not compare yourself with other you will die of moentary pressures"], ["topic", nil], ["student_id", 1], ["writer", "Ivy Nyambura"], ["created_at", "2024-07-04 13:51:49.063835"], ["updated_at", "2024-07-04 13:51:49.063835"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "How to survive in SU part 2"], ["content", "Do not compare yourself with other you will die of moentary pressures"], ["topic", nil], ["student_id", 1], ["writer", "Ivy Nyambura"], ["created_at", "2024-07-04 13:52:03.707403"], ["updated_at", "2024-07-04 13:52:03.707403"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "How to survive in SU part 2"], ["content", "Do not compare yourself with other you will die of moentary pressures"], ["topic", "lifestyle"], ["student_id", 1], ["writer", "Ivy Nyambura"], ["created_at", "2024-07-04 13:52:56.415136"], ["updated_at", "2024-07-04 13:52:56.415136"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 16:53:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:7:in `index'
+Completed 200 OK in 130ms (Views: 44.5ms | ActiveRecord: 2.8ms | Allocations: 25973)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 18:56:52 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/config/routes.rb:17: syntax error, unexpected string literal, expecting `do' or '{' or '('
+    delete '/logout', to 'sessions#destroy'
+                         ^
+):
+  
+config/routes.rb:17: syntax error, unexpected string literal, expecting `do' or '{' or '('
+Started POST "/login" for 127.0.0.1 at 2024-07-04 18:58:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/application_controller.rb:13: syntax error, unexpected `end'):
+  
+app/controllers/application_controller.rb:13: syntax error, unexpected `end'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 18:58:33 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shfa@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shfa@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shfa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 3.8ms | Allocations: 31492)
+
+
+  
+NoMethodError (undefined method `authenticate' for an instance of Student):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 18:58:57 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shfa@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shfa@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shfa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.8ms | Allocations: 7384)
+
+
+  
+NoMethodError (undefined method `authenticate' for an instance of Student):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:00:22 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shfa@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shfa@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 696)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/student.rb:3:in `<class:Student>'
+app/models/student.rb:1:in `<top (required)>'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:03:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shfa@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shfa@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shfa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 3.0ms | Allocations: 31634)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:05:52 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shfa@gmail.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"shfa@gmail.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shfa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 465)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/student" for 127.0.0.1 at 2024-07-04 19:09:30 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/student"):
+  
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 19:10:00 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "availabile"=>"true", "year"=>"2", "interests"=>"philosophy", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}}
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001630fcb5660>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "availabile"=>"true", "year"=>"2", "interests"=>"philosophy", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}} }[0m
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.0ms | Allocations: 638)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'availabile' for Student.):
+  
+app/controllers/students_controller.rb:21:in `create'
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 19:10:10 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}}
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001630e92bd60>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mStudent Create (2.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy"], ["email", "ivy10nyambz@gmail.com"], ["interests", "philosophy"], ["course", "BCOM"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 16:10:10.792059"], ["updated_at", "2024-07-04 16:10:10.792059"]]
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 181ms (Views: 0.2ms | ActiveRecord: 4.9ms | Allocations: 2958)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...); return".):
+  
+app/controllers/students_controller.rb:28:in `create'
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 19:11:42 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}}
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001630dbe4f80>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy"], ["email", "ivy10nyambz@gmail.com"], ["interests", "philosophy"], ["course", "BCOM"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 16:11:42.940325"], ["updated_at", "2024-07-04 16:11:42.940325"]]
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 189ms (Views: 0.5ms | ActiveRecord: 11.0ms | Allocations: 6520)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...); return".):
+  
+app/controllers/students_controller.rb:28:in `create'
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 19:12:19 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}}
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001630bf38c10>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "string", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy"], ["email", "ivy10nyambz@gmail.com"], ["interests", "philosophy"], ["course", "BCOM"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["string", nil], ["profile_image", nil], ["created_at", "2024-07-04 16:12:19.675994"], ["updated_at", "2024-07-04 16:12:19.675994"]]
+  ↳ app/controllers/students_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21:in `create'
+Completed 201 Created in 196ms (Views: 0.5ms | ActiveRecord: 10.7ms | Allocations: 6442)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:12:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 172ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:15:36 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.2ms | Allocations: 1238)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:18:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.2ms | Allocations: 475)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:19:14 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.1ms | Allocations: 475)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:21:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 328ms (Views: 1.1ms | ActiveRecord: 3.1ms | Allocations: 32195)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:21:33 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 180ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1057)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2024-07-04 19:21:47 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Started POST "/logout" for 127.0.0.1 at 2024-07-04 19:21:52 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:22:01 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 173ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 682)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:33:52 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (2.9ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 1.5ms | ActiveRecord: 4.7ms | Allocations: 9612)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:35:37 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/articles_controller.rb:9: else without rescue is useless
+      else 
+      ^~~~
+C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/articles_controller.rb:66: syntax error, unexpected `end'):
+  
+app/controllers/articles_controller.rb:9: else without rescue is useless
+app/controllers/articles_controller.rb:66: syntax error, unexpected `end'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:36:07 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 73ms (Views: 3.1ms | ActiveRecord: 4.7ms | Allocations: 12609)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:38:20 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.2ms | Allocations: 9324)
+
+
+  
+NameError (uninitialized constant ArticlesController::Articles):
+  
+app/controllers/articles_controller.rb:8:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:39:11 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.5ms | Allocations: 9270)
+
+
+  
+NameError (uninitialized constant ArticlesController::Articles):
+  
+app/controllers/articles_controller.rb:9:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:44:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 3.1ms | Allocations: 17985)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 19:44:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 233ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 16882)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:44:53 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 2320)
+
+
+  
+NameError (uninitialized constant ArticlesController::Articles):
+  
+app/controllers/articles_controller.rb:9:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:45:33 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.4ms | Allocations: 9323)
+
+
+  
+NameError (uninitialized constant ArticlesController::Articles):
+  
+app/controllers/articles_controller.rb:9:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:47:31 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:10:in `index'
+Completed 200 OK in 45ms (Views: 23.8ms | ActiveRecord: 3.5ms | Allocations: 17178)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 19:48:34 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 27ms (Views: 4.7ms | ActiveRecord: 3.5ms | Allocations: 12990)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-04 19:52:35 +0300
+Processing by StudentsController#show as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 4.3ms | Allocations: 7726)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Hi"], ["sender_id", 8], ["receiver_id", 3], ["created_at", "2024-07-04 17:17:43.921790"], ["updated_at", "2024-07-04 17:17:43.921790"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any 4th year papers for Networking ?"], ["sender_id", 8], ["receiver_id", 3], ["created_at", "2024-07-04 17:18:16.065834"], ["updated_at", "2024-07-04 17:18:16.065834"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:19:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 179ms (Views: 1.3ms | ActiveRecord: 3.7ms | Allocations: 35334)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 20:20:20 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 182ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1481)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:20:24 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1132)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:20:40 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 1.5ms | ActiveRecord: 8.2ms | Allocations: 9731)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:21:09 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 3.3ms | Allocations: 9649)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:22:01 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 47ms (Views: 16.0ms | ActiveRecord: 4.4ms | Allocations: 14641)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:24:01 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.0ms | Allocations: 8611)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:24:57 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 3.6ms | Allocations: 9684)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 20:25:08 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 174ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1279)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:25:22 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1104)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 20:25:24 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 9]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1121)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-04 20:25:46 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 702)
+
+
+  
+NameError (uninitialized class variable @@students in StudentsController):
+  
+app/controllers/students_controller.rb:14:in `index'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 20:28:33 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 20ms (Views: 4.2ms | ActiveRecord: 3.2ms | Allocations: 9109)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar NOT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 20:52:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240704173953_add_constraints_to_students.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar NOT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 20:52:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240704173953_add_constraints_to_students.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar NOT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean NOT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean NOT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConstraintsToStudents (20240704173953)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar DEFAULT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer DEFAULT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar DEFAULT NULL, "course" varchar NOT NULL, "year" integer NOT NULL, "available" boolean DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "string" varchar DEFAULT NULL, "profile_image" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "students" ("id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at")
+                     SELECT "id","name","email","interests","course","year","available","password_digest","string","profile_image","created_at","updated_at" FROM "astudents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNotNullToStudents (20240704180816)
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNotNullToStudents (20240704180816)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNotNullToStudents (20240704180816)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNotNullToStudents (20240704180816)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNotNullToStudents (20240704180816)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropStudentsTable (20240704183225)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropStudentsTable (20240704183225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-07-04 18:43:52.689554', '2024-07-04 18:43:52.689559') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20240703170517)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "interests" varchar NOT NULL, "course" varchar NOT NULL, "year" integer NOT NULL, "available" boolean, "password_digest" varchar NOT NULL, "profile_image" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_students_on_email" ON "students" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240703170517') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMessages (20240703170707)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "sender_id" integer NOT NULL, "receiver_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amessages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "sender_id" integer NOT NULL, "receiver_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amessages" ("id","content","sender_id","receiver_id","created_at","updated_at")
+                     SELECT "id","content","sender_id","receiver_id","created_at","updated_at" FROM "messages"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "sender_id" integer NOT NULL, "receiver_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b8f26a382d"
+FOREIGN KEY ("sender_id")
+  REFERENCES "students" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("id","content","sender_id","receiver_id","created_at","updated_at")
+                     SELECT "id","content","sender_id","receiver_id","created_at","updated_at" FROM "amessages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amessages"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amessages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "sender_id" integer NOT NULL, "receiver_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amessages" ("id","content","sender_id","receiver_id","created_at","updated_at")
+                     SELECT "id","content","sender_id","receiver_id","created_at","updated_at" FROM "messages"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text NOT NULL, "sender_id" integer NOT NULL, "receiver_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b8f26a382d"
+FOREIGN KEY ("sender_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_67c67d2963"
+FOREIGN KEY ("receiver_id")
+  REFERENCES "students" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("id","content","sender_id","receiver_id","created_at","updated_at")
+                     SELECT "id","content","sender_id","receiver_id","created_at","updated_at" FROM "amessages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amessages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_messages_on_sender_id" ON "messages" ("sender_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_messages_on_receiver_id" ON "messages" ("receiver_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240703170707') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateArticles (20240704133545)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "content" varchar NOT NULL, "topic" varchar NOT NULL, "student_id" integer NOT NULL, "writer" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_50a4a5095c"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_articles_on_student_id" ON "articles" ("student_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240704133545') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 21:46:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "available"=>true, "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2", "available"=>true}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001f6198f6ea0>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "available"=>true, "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2", "available"=>true}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (2.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy"], ["email", "ivy10nyambz@gmail.com"], ["interests", "philosophy"], ["course", "BCOM"], ["year", 2], ["available", 1], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-04 18:46:05.619667"], ["updated_at", "2024-07-04 18:46:05.619667"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 575ms (Views: 1.3ms | ActiveRecord: 24.5ms | Allocations: 24680)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 21:46:10 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "available"=>true, "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2", "available"=>true}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001f61a651c30>, params: {"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"BCOM", "year"=>"2", "interests"=>"philosophy", "available"=>true, "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Ivy", "email"=>"ivy10nyambz@gmail.com", "interests"=>"philosophy", "course"=>"BCOM", "year"=>"2", "available"=>true}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (3.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ivy"], ["email", "ivy10nyambz@gmail.com"], ["interests", "philosophy"], ["course", "BCOM"], ["year", 2], ["available", 1], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-04 18:46:10.660135"], ["updated_at", "2024-07-04 18:46:10.660135"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 3.5ms | Allocations: 2577)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: students.email):
+  
+Started POST "/signup" for 127.0.0.1 at 2024-07-04 21:47:20 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Mungai", "email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "student"=>{"name"=>"Mungai", "email"=>"mungai10@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001f617f8bce0>, params: {"name"=>"Mungai", "email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Mungai", "email"=>"mungai10@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (15.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Mungai"], ["email", "mungai10@gmail.com"], ["interests", "software development"], ["course", "ICS"], ["year", 2], ["available", 0], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-04 18:47:20.728593"], ["updated_at", "2024-07-04 18:47:20.728593"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 324ms (Views: 0.8ms | ActiveRecord: 15.9ms | Allocations: 2463)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Getting into Web Development"], ["content", "Studying html and css is where you start into your journey into Web Development"], ["topic", "tech"], ["student_id", 2], ["writer", "Mungai"], ["created_at", "2024-07-04 19:49:44.672188"], ["updated_at", "2024-07-04 19:49:44.672188"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Getting into Web Development"], ["content", "Dive into reactjs as its the new go to technology"], ["topic", "tech"], ["student_id", 2], ["writer", "Mungai"], ["created_at", "2024-07-04 19:50:36.490357"], ["updated_at", "2024-07-04 19:50:36.490357"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/messages" for 127.0.0.1 at 2024-07-04 22:50:40 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (8.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 15.9ms | Allocations: 2678)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 22:50:57 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1389)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 22:51:26 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"mungai10@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "mungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 305ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1253)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 22:51:35 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "software development"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 71ms (Views: 51.8ms | ActiveRecord: 1.6ms | Allocations: 10203)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "topic", "student_id", "writer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Business ethics"], ["content", "Its very important to study business ethics to have and portray ethics in your day to day activities"], ["topic", "philosophy"], ["student_id", 1], ["writer", "Ivy"], ["created_at", "2024-07-04 19:53:07.458663"], ["updated_at", "2024-07-04 19:53:07.458663"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 22:53:10 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "software development"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1706)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-04 22:53:36 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 315ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 22:53:45 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1594)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:01:03 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (7.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 81ms (Views: 7.6ms | ActiveRecord: 13.1ms | Allocations: 11637)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:02:02 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.9ms | Allocations: 7423)
+
+
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/article.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  attr_accessor : title:, content:, topic:, st...
+                ^
+):
+  
+app/models/article.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:02:34 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 4.5ms | Allocations: 7468)
+
+
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/article.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+  belongs_to :student
+             ^
+):
+  
+app/models/article.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:02:56 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.0ms | Allocations: 7469)
+
+
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/article.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  attr_accessor: :title, :content, :topic, :s...
+               ^
+):
+  
+app/models/article.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:03:04 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 47ms (Views: 6.8ms | ActiveRecord: 6.0ms | Allocations: 12602)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:03:56 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 45ms (Views: 6.5ms | ActiveRecord: 5.7ms | Allocations: 12576)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:04:09 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 49ms (Views: 9.0ms | ActiveRecord: 6.2ms | Allocations: 12518)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:06:15 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.9ms | Allocations: 7661)
+
+
+  
+NoMethodError (undefined method `attributes' for class Article):
+  
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<top (required)>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:18:44 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (2.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.7ms | Allocations: 7101)
+
+
+  
+NoMethodError (undefined method `attributes' for class Article):
+  
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<top (required)>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:19:30 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 42ms (Views: 7.7ms | ActiveRecord: 5.7ms | Allocations: 12245)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:22:29 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/articles_controller.rb:12: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+..._at, :updated_at], status: :200
+...                            ^~~
+):
+  
+app/controllers/articles_controller.rb:12: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+Started GET "/articles" for 127.0.0.1 at 2024-07-04 23:22:49 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "philosophy"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."topic" = ?[0m  [["topic", "philosophy"]]
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 302 Found in 60ms (Views: 8.1ms | ActiveRecord: 7.2ms | Allocations: 12560)
+
+
+Started POST "/message" for 127.0.0.1 at 2024-07-04 23:32:08 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/message"):
+  
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:32:43 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/controllers/messages_controller.rb:24: syntax error, unexpected `end'):
+  
+app/controllers/messages_controller.rb:24: syntax error, unexpected `end'
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:33:01 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    belongs_to :sender, class_name: 'Student'...
+               ^
+):
+  
+app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:34:15 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    belongs_to :sender_id, class_name: 'Stude...
+               ^
+):
+  
+app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:37:51 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    belongs_to :student
+               ^
+):
+  
+app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:46:45 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    belongs_to :student
+               ^
+):
+  
+app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:56:11 +0300
+  
+SyntaxError (C:/Users/shadr/OneDrive/Desktop/Pictures/Documents/OOP 2/StrathLink/strath-server/app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    belongs_to :student
+               ^
+):
+  
+app/models/message.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:56:53 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61b127d08>, params: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}} }[0m
+Completed 422 Unprocessable Content in 100ms (ActiveRecord: 6.8ms | Allocations: 15179)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/students" for 127.0.0.1 at 2024-07-04 23:57:45 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (4.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 4.2ms | Allocations: 1350)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:58:04 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f619aaf788>, params: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}} }[0m
+Completed 422 Unprocessable Content in 5ms (ActiveRecord: 0.1ms | Allocations: 1471)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:58:16 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender"=>1, "receiver"=>2, "message"=>{"content"=>"Helooooooooooooo"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :sender, :receiver, :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f6199c0980>, params: {"content"=>"Helooooooooooooo", "sender"=>1, "receiver"=>2, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo"}} }[0m
+Completed 422 Unprocessable Content in 19ms (ActiveRecord: 0.1ms | Allocations: 1459)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-04 23:58:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ivy10nyambz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "ivy10nyambz@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 305ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 1245)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-04 23:59:55 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61b067800>, params: {"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>1, "receiver_id"=>2}} }[0m
+Completed 422 Unprocessable Content in 17ms (ActiveRecord: 0.2ms | Allocations: 1463)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-05 00:01:35 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61afca820>, params: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}} }[0m
+Completed 422 Unprocessable Content in 8ms (ActiveRecord: 0.1ms | Allocations: 1462)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-05 00:03:16 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61b0e3c20>, params: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (2.9ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Helooooooooooooo"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-04 21:03:16.506264"], ["updated_at", "2024-07-04 21:03:16.506264"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 66ms (Views: 0.8ms | ActiveRecord: 10.7ms | Allocations: 13909)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-05 00:04:39 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61b006190>, params: {"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Helooooooooooooo", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Helooooooooooooo"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-04 21:04:39.605885"], ["updated_at", "2024-07-04 21:04:39.605885"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 41ms (Views: 0.4ms | ActiveRecord: 7.9ms | Allocations: 12848)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-05 00:05:19 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Now you're not gonna text me back??????", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Now you're not gonna text me back??????", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f61b101b80>, params: {"content"=>"Now you're not gonna text me back??????", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Now you're not gonna text me back??????", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Now you're not gonna text me back??????"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-04 21:05:19.717996"], ["updated_at", "2024-07-04 21:05:19.717996"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 17ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 3653)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-05 00:05:45 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x000001f619afce48>, params: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (2.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-04 21:05:45.943516"], ["updated_at", "2024-07-04 21:05:45.943516"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 19ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 3661)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-05 00:09:39 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 1]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 1258)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-05 00:10:57 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"mungai10@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "mungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 304ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 1268)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-05 00:11:27 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 2]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1262)
+
+

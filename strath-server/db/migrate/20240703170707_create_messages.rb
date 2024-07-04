@@ -1,7 +1,7 @@
 class CreateMessages < ActiveRecord::Migration[6.1]
   def change
     create_table :messages do |t|
-      t.text :content
+      t.text :content, null: false
       t.integer :sender_id, null: false
       t.integer :receiver_id, null: false
 

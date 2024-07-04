@@ -12,9 +12,9 @@
 
 ActiveRecord::Schema[7.1].define(version: 2024_07_04_133545) do
   create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.string "topic"
+    t.string "title", null: false
+    t.string "content", null: false
+    t.string "topic", null: false
     t.integer "student_id", null: false
     t.string "writer"
     t.datetime "created_at", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_04_133545) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "content"
+    t.text "content", null: false
     t.integer "sender_id", null: false
     t.integer "receiver_id", null: false
     t.datetime "created_at", null: false
@@ -33,17 +33,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_04_133545) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "interests"
-    t.string "course"
-    t.integer "year"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "interests", null: false
+    t.string "course", null: false
+    t.integer "year", null: false
     t.boolean "available"
-    t.string "password_digest"
-    t.string "string"
+    t.string "password_digest", null: false
     t.string "profile_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_students_on_email", unique: true
   end
 
   add_foreign_key "articles", "students"

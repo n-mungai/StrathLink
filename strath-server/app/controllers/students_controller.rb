@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+    before_action :set_current_student
+
+    # get students according to filtered parameter
     def index
         if params[:course]
             @@students = Student.where(course: params[:course])
@@ -6,29 +9,29 @@ class StudentsController < ApplicationController
             @@students = Student.where(year: params[:year])
         elsif params[:interests]
             @@students = Student.where(interests: params[:interests])
+        elsif !(params[:course]&&params[:year]&&params[:interests])
+            @@students = Student.all
         end
 
-        render json: @@students
+        render json: @@students,  :except => [:created_at, :updated_at]
     end
 
+    # get logged in user '/loggedin'
     def show
-        @student = Student.find_by(email: params[:email])
-
-        render json: @student
+        render json: @current_student
     end
 
+    # create a user account '/signin'
     def create
-        student = Student.new(student_params).save
+        student = Student.create!(student_params)
         if student
-            render json: { status: 'created', student: student}, status: :created
+            render json: { status: 'created', student: student,  :except => [:created_at, :updated_at]}, status: :created
         else
             render json: { status: 'error', errors: student.errors.full_messages}, status: :unprocessable_entity
         end
-
-        render json: @student
     end
 
     def student_params
-        params.permit(:name, :email, :password, :password_confirmation, :course, :availabile, :year, :interests, )
+        params.permit(:name, :email, :password, :password_confirmation, :course, :available, :year, :interests)
       end
 end
