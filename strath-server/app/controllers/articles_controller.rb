@@ -1,10 +1,15 @@
 class ArticlesController < ApplicationController
   # before_action :authorize
 
-  #GET all articles according to the logged in users interests
+  #GET all articles according to the logged in users interests if he/she has any interests
     def index 
-        articles = Article.all
-        render json: articles
+        @articles = Article.where(topic: @current_student.interests)
+
+      if @articles.empty?
+         @articles = Article.all
+      end
+        puts @current_student.interests
+        render json: @articles, :except => [:created_at, :updated_at]
     end
 
     def show
@@ -19,7 +24,7 @@ class ArticlesController < ApplicationController
     def create
       article = Article.create(article_params)
       if article
-        render json: article, status: :created
+        render json: article,  :except => [:created_at, :updated_at], status: :created
       else
         render json: {error: article.errors.full_messages}, status: :unprocessable_entity
       end
@@ -31,7 +36,7 @@ class ArticlesController < ApplicationController
       article = Article.find_by(id:params[:id])
       if article
         article.update(article_params)
-        render json: article,status: :accepted
+        render json: article,  :except => [:created_at, :updated_at],status: :accepted
       else
         render json: {error: "Article not found"}, status: :not_found
       end
@@ -41,7 +46,6 @@ class ArticlesController < ApplicationController
     def destroy
       article = Article.find_by(id:params[:id])
       if article
-        article.reviews.destroy_all # delete all associated reviews
         article.destroy
         render json: []
       else
