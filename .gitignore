@@ -5,3 +5,7 @@ strath-server\tmp
 strath-server\log
 strath-server\storage\*
 strath-server\Gemfile.lock
+
+strath-link\node_modules\*
+
+strath-link\package-lock.json
