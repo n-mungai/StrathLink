@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -43,11 +43,12 @@ function Login() {
             password: '',
         }
     );
+    Navigate('/search')
   };
 
   return (
     <div className="login-container">
-      <div className="form-container">
+      <div id="login-form"  className="form-container p-5 rounded shadow bg-white">
         <form onSubmit={handleSubmit}>
           <h3 className="text-center">Log In</h3>
           <div className="mb-2">

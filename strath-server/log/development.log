@@ -2341,3 +2341,451 @@ Processing by MessagesController#index as */*
 Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 1262)
 
 
+Started GET "/" for ::1 at 2024-07-09 08:07:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/tools/ruby33/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/tools/ruby33/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 365)
+Completed 200 OK in 41ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 5959)
+
+
+Started GET "/students" for ::1 at 2024-07-09 08:07:57 +0300
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 158ms (Views: 61.0ms | ActiveRecord: 4.2ms | Allocations: 28415)
+
+
+Started GET "/favicon.ico" for ::1 at 2024-07-09 08:07:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/signup" for 127.0.0.1 at 2024-07-09 08:15:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Mungai", "email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "student"=>{"name"=>"Mungai", "email"=>"mungai10@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x0000017ed240e758>, params: {"name"=>"Mungai", "email"=>"mungai10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Mungai", "email"=>"mungai10@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (2.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Mungai"], ["email", "mungai10@gmail.com"], ["interests", "software development"], ["course", "ICS"], ["year", 2], ["available", 0], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-09 05:15:41.777812"], ["updated_at", "2024-07-09 05:15:41.777812"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 6.1ms | Allocations: 24650)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: students.email):
+  
+Started POST "/signup" for 127.0.0.1 at 2024-07-09 08:16:07 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Junaid", "email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "student"=>{"name"=>"Junaid", "email"=>"junaid@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x0000017ed303be18>, params: {"name"=>"Junaid", "email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "course"=>"ICS", "year"=>"2", "interests"=>"software development", "available"=>false, "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Junaid", "email"=>"junaid@gmail.com", "interests"=>"software development", "course"=>"ICS", "year"=>"2", "available"=>false}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (1.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Junaid"], ["email", "junaid@gmail.com"], ["interests", "software development"], ["course", "ICS"], ["year", 2], ["available", 0], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-09 05:16:07.927285"], ["updated_at", "2024-07-09 05:16:07.927285"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 179ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 2732)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-07-09 08:17:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/student"):
+  
+Started POST "/login" for 127.0.0.1 at 2024-07-09 08:17:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 183ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1302)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-09 08:17:59 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "software development"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 55ms (Views: 24.2ms | ActiveRecord: 0.7ms | Allocations: 10925)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-09 08:18:21 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 3]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 2737)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-09 08:18:26 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1307)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-07-17 13:09:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "student"=>{"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :passwordconfirm, :interest, :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001da0be16180>, params: {"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (14.9ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Shadrack Mungai"], ["email", "shadrackmungai10@gmail.com"], ["interests", "Tech"], ["course", "ICS"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-17 10:09:15.275102"], ["updated_at", "2024-07-17 10:09:15.275102"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 475ms (Views: 1.4ms | ActiveRecord: 21.4ms | Allocations: 24012)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-07-17 13:09:21 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "student"=>{"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :passwordconfirm, :interest, :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001da0c1bf7a0>, params: {"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Shadrack Mungai", "email"=>"shadrackmungai10@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Shadrack Mungai"], ["email", "shadrackmungai10@gmail.com"], ["interests", "Tech"], ["course", "ICS"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-17 10:09:21.352598"], ["updated_at", "2024-07-17 10:09:21.352598"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 2.5ms | Allocations: 2635)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: students.email):
+  
+Started POST "/signup" for 127.0.0.1 at 2024-07-17 13:13:52 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Parneet Kaur", "email"=>"parneetk@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "student"=>{"name"=>"Parneet Kaur", "email"=>"parneetk@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :passwordconfirm, :interest, :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001da0be16540>, params: {"name"=>"Parneet Kaur", "email"=>"parneetk@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "interest"=>"g", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Parneet Kaur", "email"=>"parneetk@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Parneet Kaur"], ["email", "parneetk@gmail.com"], ["interests", "Tech"], ["course", "ICS"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-17 10:13:52.550412"], ["updated_at", "2024-07-17 10:13:52.550412"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 236ms (Views: 0.6ms | ActiveRecord: 2.4ms | Allocations: 2433)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-07-17 13:16:57 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Viviane Nyambura", "email"=>"vivianenyambura@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "student"=>{"name"=>"Viviane Nyambura", "email"=>"vivianenyambura@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :passwordconfirm, :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001da0b7b4300>, params: {"name"=>"Viviane Nyambura", "email"=>"vivianenyambura@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Tech", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Viviane Nyambura", "email"=>"vivianenyambura@gmail.com", "interests"=>"Tech", "course"=>"ICS", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (7.1ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Viviane Nyambura"], ["email", "vivianenyambura@gmail.com"], ["interests", "Tech"], ["course", "ICS"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-17 10:16:57.976820"], ["updated_at", "2024-07-17 10:16:57.976820"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 257ms (Views: 0.8ms | ActiveRecord: 7.6ms | Allocations: 2425)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-17 13:41:51 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", ""=>"n", "session"=>{"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", ""=>"n"}}
+  [1m[36mStudent Load (2.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 232ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 1619)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-07-17 13:52:57 +0300
+Processing by StudentsController#create as */*
+  Parameters: {"name"=>"Junaid Chaudhry", "email"=>"junaidchaudhry@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Coding Hard stuff", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "student"=>{"name"=>"Junaid Chaudhry", "email"=>"junaidchaudhry@gmail.com", "interests"=>"Coding Hard stuff", "course"=>"ICS", "year"=>"2"}}
+  [1m[36mStudent Load (4.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :passwordconfirm, :student. Context: { controller: StudentsController, action: create, request: #<ActionDispatch::Request:0x000001da0be1cee0>, params: {"name"=>"Junaid Chaudhry", "email"=>"junaidchaudhry@gmail.com", "course"=>"ICS", "year"=>"2", "interests"=>"Coding Hard stuff", "password"=>"[FILTERED]", "passwordconfirm"=>"[FILTERED]", "controller"=>"students", "action"=>"create", "student"=>{"name"=>"Junaid Chaudhry", "email"=>"junaidchaudhry@gmail.com", "interests"=>"Coding Hard stuff", "course"=>"ICS", "year"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mStudent Create (3.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "interests", "course", "year", "available", "password_digest", "profile_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Junaid Chaudhry"], ["email", "junaidchaudhry@gmail.com"], ["interests", "Coding Hard stuff"], ["course", "ICS"], ["year", 2], ["available", nil], ["password_digest", "[FILTERED]"], ["profile_image", nil], ["created_at", "2024-07-17 10:52:58.168461"], ["updated_at", "2024-07-17 10:52:58.168461"]]
+  ↳ app/controllers/students_controller.rb:26:in `create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:26:in `create'
+Completed 201 Created in 445ms (Views: 1.0ms | ActiveRecord: 26.4ms | Allocations: 2707)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-17 13:54:42 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaidchaudhry@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaidchaudhry@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaidchaudhry@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 429ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 1105)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-17 15:57:45 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (11.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 214ms (Views: 1.9ms | ActiveRecord: 16.6ms | Allocations: 1295)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-17 15:59:09 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 184ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 950)
+
+
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started GET "/studen" for 127.0.0.1 at 2024-07-17 15:59:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/studen"):
+  
+Started POST "/login" for 127.0.0.1 at 2024-07-17 16:35:16 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"shadrackmungai10@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (18.9ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "shadrackmungai10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 375ms (Views: 6.4ms | ActiveRecord: 30.4ms | Allocations: 1296)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 1453)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:44 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:45 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:45 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:48 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 22ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:48 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 22ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:48 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:35:49 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1388)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-17 16:53:43 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (5.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 170ms (Views: 3.5ms | ActiveRecord: 8.3ms | Allocations: 2253)
+
+

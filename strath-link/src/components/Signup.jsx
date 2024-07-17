@@ -56,8 +56,8 @@ function Signup() {
     };
 
     return (
-        <div className='signup d-flex justify-content-center align-items-center vh-100 bg-light'>
-            <div className='form-container p-5 rounded shadow bg-white'>
+        <div className='signup-container d-flex justify-content-center align-items-center vh-100 bg-light'>
+            <div className='signup-form p-5 rounded shadow bg-white'>
                 <form onSubmit={handleSubmit}>
                     <h3 className='text-center mb-4'>Create An Account</h3>
                     <div className='mb-3'>
