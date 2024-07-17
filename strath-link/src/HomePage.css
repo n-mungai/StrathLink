@@ -7,14 +7,6 @@
     padding: 20px;
   }
   
-  .search-button {
-    background-color: #00f;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
   
   .category-section {
     width: 100%;
@@ -57,34 +49,5 @@
   
   .meta-info span {
     margin: 2px 0;
-  }
-  
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #fff;
-    padding: 10px 0;
-  }
-  
-  .footer-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-  }
-  
-  .footer-button.red {
-    background-color: red;
-  }
-  
-  .footer-button.green {
-    background-color: green;
-  }
-  
-  .footer-button.blue {
-    background-color: blue;
   }
   

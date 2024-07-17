@@ -8,7 +8,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.example.com/articles'); // Replace with your backend API URL
+        const response = await fetch('http://127.0.0.1:3000/students'); // Replace with your backend API URL
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -118,7 +118,6 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <button className="search-button">Search</button>
       {Object.keys(categorizedArticles).map((category, index) => (
         <div className="category-section" key={index}>
           <h2>{category}</h2>
@@ -127,11 +126,6 @@ const HomePage = () => {
           </div>
         </div>
       ))}
-      <div className="footer">
-        <button className="footer-button red"></button>
-        <button className="footer-button green"></button>
-        <button className="footer-button blue"></button>
-      </div>
     </div>
   );
 };
