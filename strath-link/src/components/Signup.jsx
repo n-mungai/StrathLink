@@ -145,7 +145,7 @@ function Signup() {
                         />
                     </div>
                     <div className='d-grid'>
-                        <button type="submit" className='btn btn-primary btn-block'>Sign Up</button>
+                    <button ><Link to="/profile" >Sign Up</Link></button>
                     </div>
                     <p className='text-center mt-3'>
                        Already Registered? <Link to="/" className='ms-2'>Sign in</Link>
