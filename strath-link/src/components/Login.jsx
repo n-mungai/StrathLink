@@ -86,7 +86,7 @@ function Login() {
             </label>
           </div>
           <div className="d-grid">
-            <button className="btn btn-primary">Sign in</button>
+          <button ><Link to="/profile" >Sign In</Link></button>
           </div>
           <p className="text-right">
             Forgot <a href="">Password?</a>
