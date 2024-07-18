@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./Login.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
+  // const [ currentUserId, setCurrentUserId ] = useState(null);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +32,7 @@ function Login() {
       if (response.ok) {
         const data = await response.json();
         console.log("Success:", data);
+        //setCurrentUserId(data.student.id);
       } else {
         console.log("Error: ", response.statusText);
       }
@@ -43,7 +46,9 @@ function Login() {
             password: '',
         }
     );
-    Navigate('/search')
+    // const history = useHistory();
+    // history.push('/home')
+    // Navigate('/home')
   };
 
   return (
@@ -86,7 +91,7 @@ function Login() {
             </label>
           </div>
           <div className="d-grid">
-          <button ><Link to="/profile" >Sign In</Link></button>
+          <button >SIGN IN</button>
           </div>
           <p className="text-right">
             Forgot <a href="">Password?</a>

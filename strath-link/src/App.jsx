@@ -1,18 +1,42 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Signup from "./components/Signup";
+import Login from "./components/Login"
+import Header from './components/header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Search from "./components/search/Search";
+import HomePage from "./components/HomePage";
+import Messages from './components/Messages';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>
+      <Header />
+      <Outlet />
+    </div>,
+    children: [
+      {
+        path: "/home",
+        element: <HomePage />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
+      },
+      {
+        path: "/login",
+        element: <Login/>
+      },
+      {
+        path: "/messages",
+        element: <Messages/>
+      }
+    ]
+  },
+])
 
 function App() {
   return (
-    <BrowserRouter>
-        <Routes>
-          <Route path="/search" element={<Search/>}>SEARCH</Route>
-          <Route path='/login' element={<Login />}>LOGIN</Route>
-          <Route path='/signup' element={<Signup />}>SIGNUP</Route>
-        </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router}/>
   )
 }
 

@@ -2789,3 +2789,1646 @@ Processing by StudentsController#index as */*
 Completed 200 OK in 170ms (Views: 3.5ms | ActiveRecord: 8.3ms | Allocations: 2253)
 
 
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:26:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 7.0ms | Allocations: 17902)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:26:40 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:35:38 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (3.9ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 6.4ms | Allocations: 924)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:35:38 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:36:24 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:36:24 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:36:57 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:36:57 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:37:06 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:37:07 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:37:07 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:37:08 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 10:37:08 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:05:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 5.1ms | Allocations: 17896)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:05:31 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:13:32 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (3.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 4.8ms | Allocations: 924)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:13:32 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:15:04 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:15:04 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:17:50 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:17:50 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:18:10 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:18:10 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:18:45 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 342ms (Views: 4.9ms | ActiveRecord: 1.4ms | Allocations: 16288)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:19:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 221ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1040)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:22:15 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 226ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1019)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:29:46 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 231ms (Views: 0.8ms | ActiveRecord: 4.2ms | Allocations: 1364)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:31:19 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 224ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1020)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:31:32 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 224ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1020)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-07-18 14:42:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (2.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 226ms (Views: 0.9ms | ActiveRecord: 4.2ms | Allocations: 1364)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:46:19 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 613)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:46:19 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:48:37 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:48:41 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:48:41 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:48:46 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:55:33 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (3.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 5.3ms | Allocations: 908)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 14:55:33 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:03:10 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."sender_id" = ?[0m  [["sender_id", 3]]
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 22ms (Views: 2.1ms | ActiveRecord: 4.0ms | Allocations: 3079)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:04:30 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 671)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:04:31 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 611)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:04:56 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da33262d8>, params: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 58ms (ActiveRecord: 0.3ms | Allocations: 9067)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-07-18 15:06:08 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 223ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1105)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:06:10 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da31e47f8>, params: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.1ms | Allocations: 1699)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:06:19 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da32f3900>, params: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 5ms (ActiveRecord: 0.1ms | Allocations: 1699)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:06:42 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da3209d00>, params: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-18 12:06:42.356458"], ["updated_at", "2024-07-18 12:06:42.356458"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 44ms (Views: 0.4ms | ActiveRecord: 4.8ms | Allocations: 5621)
+
+
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:07:39 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:07:43 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da1aab370>, params: {"message"=>{"content"=>"Heyyyyyyyy", "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 4ms (ActiveRecord: 0.1ms | Allocations: 1699)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:07:58 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Hello", "receiver_id"=>"1"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da33b2b20>, params: {"message"=>{"content"=>"Hello", "receiver_id"=>"1"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 8ms (ActiveRecord: 0.1ms | Allocations: 1698)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:08:53 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:09:05 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:09:30 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:09:30 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:09:43 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 611)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:10:03 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"content"=>"Hello", "sender_id"=>3, "receiver_id"=>"2"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da326ef70>, params: {"message"=>{"content"=>"Hello", "sender_id"=>3, "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 4ms (ActiveRecord: 0.1ms | Allocations: 1702)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:10:20 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:20:35 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (3.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 5.4ms | Allocations: 909)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:20:37 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:20:40 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:20:43 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:21:13 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:21:13 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:21:14 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:21:18 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:22:23 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?user_id=3" for 127.0.0.1 at 2024-07-18 15:22:23 +0300
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:26:18 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:26:39 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:26:43 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:26:43 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:27:02 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:27:03 +0300
+Processing by MessagesController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 610)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started POST "/login" for 127.0.0.1 at 2024-07-18 15:27:21 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"junaid@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"junaid@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "junaid@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 225ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1070)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:27:33 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"params"=>{"content"=>"hi", "sender_id"=>3, "receiver_id"=>"2"}, "message"=>{}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameters: :params, :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da19210e0>, params: {"params"=>{"content"=>"hi", "sender_id"=>3, "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create", "message"=>{}} }[0m
+Completed 422 Unprocessable Content in 4ms (ActiveRecord: 0.1ms | Allocations: 1709)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/login" for 127.0.0.1 at 2024-07-18 15:30:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/mesa" for 127.0.0.1 at 2024-07-18 15:30:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/mesa"):
+  
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:31:00 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 613)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:31:28 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:31:33 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:31:39 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:41:24 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (3.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 5.0ms | Allocations: 908)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:41:24 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 612)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:42:55 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.6ms | Allocations: 4441)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:42:56 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 620)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:43:35 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da12558d8>, params: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-18 12:43:35.045867"], ["updated_at", "2024-07-18 12:43:35.045867"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 24ms (Views: 0.2ms | ActiveRecord: 5.8ms | Allocations: 10746)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:43:35 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da3325798>, params: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-18 12:43:35.820292"], ["updated_at", "2024-07-18 12:43:35.820292"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 11ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 3726)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:43:36 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da1bb1eb8>, params: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1, "controller"=>"messages", "action"=>"create", "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>2, "receiver_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mMessage Create (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 2], ["receiver_id", 1], ["created_at", "2024-07-18 12:43:36.359754"], ["updated_at", "2024-07-18 12:43:36.359754"]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3735)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 15:43:41 +0300
+Processing by ArticlesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mArticle Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."topic" = ? LIMIT ?[0m  [["topic", "software development"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:12:in `index'
+Completed 200 OK in 36ms (Views: 25.2ms | ActiveRecord: 0.7ms | Allocations: 9295)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:43:45 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1429)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:43:49 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 619)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:43:49 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:44:20 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:14 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:15 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:20 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:24 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:27 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:45:56 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 618)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:48:17 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.7ms | Allocations: 4437)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:48:17 +0300
+Processing by MessagesController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_student'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 620)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:13 +0300
+Processing by MessagesController#index as */*
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1473)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:13 +0300
+Processing by MessagesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:33 +0300
+Processing by MessagesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NoMethodError (undefined method `id' for nil):
+  
+app/controllers/messages_controller.rb:5:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:50 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: -9.2ms | ActiveRecord: 29.3ms | Allocations: 5369)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:51 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 789)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:53 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:49:53 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:51:35 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da29f9890>, params: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+Completed 422 Unprocessable Content in 13ms (ActiveRecord: 2.1ms | Allocations: 3983)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 15:52:51 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 790)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 15:52:54 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da1963e90>, params: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1191)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/messages?user_id=undefined" for 127.0.0.1 at 2024-07-18 15:59:58 +0300
+Processing by MessagesController#index as */*
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMessage Load (6.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 8.3ms | Allocations: 1064)
+
+
+Started GET "/messages?user_id=undefined" for 127.0.0.1 at 2024-07-18 16:00:06 +0300
+Processing by MessagesController#index as */*
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 788)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:00:58 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:03:28 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da31ad988>, params: {"message"=>{"content"=>"Hi", "sender_id"=>3, "receiver_id"=>"2"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1191)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:12:54 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 711)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:12:54 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:04 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:04 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:11 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 4.3ms | Allocations: 1066)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:11 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:15 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:15 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:17 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 788)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:17 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:24 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2024-07-18 16:13:24 +0300
+Processing by ArticlesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 95)
+
+
+  
+NoMethodError (undefined method `interests' for nil):
+  
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:43 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:13:43 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 788)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:13:52 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"", "sender_id"=>3, "receiver_id"=>"hello"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da0a23700>, params: {"message"=>{"content"=>"", "sender_id"=>3, "receiver_id"=>"hello"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 4ms (ActiveRecord: 0.0ms | Allocations: 1192)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:14:13 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"gffhj", "sender_id"=>3, "receiver_id"=>"hello"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da32826d8>, params: {"message"=>{"content"=>"gffhj", "sender_id"=>3, "receiver_id"=>"hello"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1191)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:14:46 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da1a29398>, params: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1191)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:22:05 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da29f33f0>, params: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 422 Unprocessable Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1224)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Sender must exist, Receiver must exist, Content can't be blank):
+  
+app/controllers/messages_controller.rb:10:in `create'
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:35:16 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}}
+[31mUnpermitted parameter: :message. Context: { controller: MessagesController, action: create, request: #<ActionDispatch::Request:0x0000014da33498a0>, params: {"message"=>{"content"=>"hello", "sender_id"=>3, "receiver_id"=>"7"}, "controller"=>"messages", "action"=>"create"} }[0m
+Completed 201 Created in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4656)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:36:37 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (3.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 4.8ms | Allocations: 1139)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:36:37 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-07-18 16:41:52 +0300
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 117)
+
+
+  
+NoMethodError (undefined method `set_current_student' for an instance of StudentsController):
+  
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:109:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (3.1.6) lib/rack/etag.rb:29:in `call'
+rack (3.1.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.6) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/students" for 127.0.0.1 at 2024-07-18 16:42:21 +0300
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:16:in `index'
+Completed 200 OK in 19ms (Views: 4.6ms | ActiveRecord: 4.5ms | Allocations: 7546)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:42:48 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"content"=>"Do you have any year 4 papers ???", "sender_id"=>3, "receiver_id"=>7, "message"=>{"content"=>"Do you have any year 4 papers ???", "sender_id"=>3, "receiver_id"=>7}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Do you have any year 4 papers ???"], ["sender_id", 3], ["receiver_id", 7], ["created_at", "2024-07-18 13:42:48.453735"], ["updated_at", "2024-07-18 13:42:48.453735"]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 6252)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:43:42 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"Heyyy send me the past papers", "sender_id"=>3, "receiver_id"=>"5"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (13.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "Heyyy send me the past papers"], ["sender_id", 3], ["receiver_id", 5], ["created_at", "2024-07-18 13:43:42.306492"], ["updated_at", "2024-07-18 13:43:42.306492"]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 14.2ms | Allocations: 3021)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:43:47 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.2ms | Allocations: 974)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:43:47 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 852)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:44:24 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"hellooooooooooooooooo", "sender_id"=>3, "receiver_id"=>"5"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "hellooooooooooooooooo"], ["sender_id", 3], ["receiver_id", 5], ["created_at", "2024-07-18 13:44:24.668296"], ["updated_at", "2024-07-18 13:44:24.668296"]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+Completed 201 Created in 9ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 3069)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:44:29 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 884)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:44:29 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 884)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:48:40 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 884)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:48:41 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 884)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-07-18 16:48:51 +0300
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>{"content"=>"You goood ??", "sender_id"=>3, "receiver_id"=>"4"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (13.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (0.1ms)[0m  [1m[32mINSERT INTO "messages" ("content", "sender_id", "receiver_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["content", "You goood ??"], ["sender_id", 3], ["receiver_id", 4], ["created_at", "2024-07-18 13:48:51.418892"], ["updated_at", "2024-07-18 13:48:51.418892"]]
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/messages_controller.rb:18:in `create'
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 14.1ms | Allocations: 3068)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:48:51 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 915)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-07-18 16:48:51 +0300
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 915)
+
+

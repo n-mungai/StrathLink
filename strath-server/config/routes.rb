@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
     get '/students', to: 'students#index'
 
+    get '/messages', to: 'messages#index'
+
     get '/loggedin', to: 'students#show'
 
     post '/signup', to: 'students#create'

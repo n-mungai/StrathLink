@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-    before_action :set_current_student
+   # before_action :set_current_student
 
     # get students according to filtered parameter
     def index
