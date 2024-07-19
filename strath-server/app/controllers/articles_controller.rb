@@ -62,3 +62,35 @@ class ArticlesController < ApplicationController
 
 
 end
+
+
+
+=begin
+class UserSession {
+  private static userSession _instance = null;
+
+  String sessionToken = "";
+
+  private UserSession() {
+    userSession = this;
+  }
+
+  public void setToken(token) {
+    sessionToken = token;
+  }
+
+  public get instance() {
+    if (_instance == null) {
+      return new UserSession();
+    } else {
+      return _instance;
+    }
+  }
+}
+
+
+() => {
+    var session = fetch();
+    session.sessionToken;
+}
+=end

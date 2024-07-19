@@ -5,6 +5,8 @@
 }
 .signup-container{
     width: 100%;
+    padding-top: 15vh;
+
 }
 #login-form{
     margin-top: 17%;
@@ -54,4 +56,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+.signup-form{
+    width: 50vw;
 }

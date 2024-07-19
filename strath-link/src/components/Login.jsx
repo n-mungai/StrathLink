@@ -46,6 +46,7 @@ function Login() {
             password: '',
         }
     );
+    window.location.href = "/home";
     // const history = useHistory();
     // history.push('/home')
     // Navigate('/home')
